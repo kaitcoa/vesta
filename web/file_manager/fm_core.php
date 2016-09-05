@@ -53,7 +53,7 @@ class FileManager {
             $path = $path_part;
         }
         else {
-            $path = $this->ROOT_DIR . '/' . $path_part;
+            $path = htmlspecialchars($this->ROOT_DIR . '/' . $path_part, ENT_QUOTES);
         }
         //var_dump($path);die();
         //$path = str_replace(' ', '\ ', $path);
